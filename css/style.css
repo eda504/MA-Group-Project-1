@@ -6,7 +6,7 @@
     margin: 0;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 1;
     width: 100%;
     border-bottom: 2px solid #FFAAEA;
 }
@@ -14,12 +14,10 @@
 .nav li {
     display: inline;
     margin: 10px;
-    font-family: "Edu NSW ACT Cursive", cursive;
+    font-family: "Karla", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 600;
+    font-weight: 800;
     font-style: normal;
-    color: #735649;
-    font-size: 20px
 }
 
 .nav li a:hover {
@@ -31,4 +29,58 @@ h1 {
     font-size: 30px;
     float: left;
 
+}
+
+.grid-container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 50% auto auto auto;
+}
+
+.grid-item {
+    background-color: mistyrose;
+    padding: 10px;
+    text-align: center;
+    grid-row: 3 / span 10;
+}
+
+.main-1 {
+    grid-row: 1;
+    grid-column: 2 / span 3;
+}
+
+.main-2 {
+    grid-row: 1;
+    grid-column: 3 / span 3;
+    ;
+}
+
+.support-1 {
+    grid-row: 4;
+    grid-column: 1;
+}
+
+.support-2 {
+    grid-row: 4;
+    grid-column: 2/ span 2;
+}
+
+.main-img {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+img {
+    float: left;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    position: absolute;
+}
+
+body {
+    font-family: "Edu NSW ACT Cursive", cursive;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
 }
