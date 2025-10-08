@@ -1,19 +1,4 @@
-body {
-    background-color: mistyrose;
-    text-align: center;
-}
-
-iframe {
-    width: 90%;
-    max-width: 640px;
-    height: 800px;
-    border: none;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-}
-
-
-nav {
+.nav {
     list-style: none;
     text-align: center;
     background-color: #ffbeef;
@@ -26,7 +11,7 @@ nav {
     border-bottom: 2px solid #b697ae;
 }
 
-nav li {
+.nav li {
     display: inline;
     margin: 10px;
     font-family: "Karla", sans-serif;
@@ -35,7 +20,7 @@ nav li {
     font-style: normal;
 }
 
-nav li a:hover {
+.nav li a:hover {
     color: #e699d3;
     transition: color 0.3s ease;
 }
