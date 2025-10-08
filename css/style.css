@@ -1,32 +1,28 @@
 .nav {
     list-style: none;
     text-align: center;
-    background-color: #ffbeef;
+    background-color: #EC91D8;
     padding: 20px 0;
     margin: 0;
     position: sticky;
     top: 0;
     z-index: 1000;
     width: 100%;
-    border-bottom: 2px solid #b697ae;
+    border-bottom: 2px solid #FFAAEA;
 }
 
 .nav li {
     display: inline;
     margin: 10px;
-    font-family: "Karla", sans-serif;
+    font-family: "Edu NSW ACT Cursive", cursive;
     font-optical-sizing: auto;
-    font-weight: 800;
+    font-weight: 600;
     font-style: normal;
+    color: #735649; 
+    font-size:20px
 }
 
 .nav li a:hover {
-    color: #e699d3;
+    color: #611e53;
     transition: color 0.3s ease;
-}
-
-h1 {
-    font-size: 30px;
-    float:left;
-    
 }
