@@ -9,18 +9,87 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+
+    <style>
+        /* background */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('images/background.jpg');
+            text-align: center;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background-color: #ffd8f594;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* grid */
+        .grid-container {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: auto auto auto;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .grid-item {
+            padding: 10px;
+        }
+
+        iframe {
+            position: relative;
+            background-color: #a47963;
+            max-width: 640px;
+            height: 800px;
+            border: 10px solid #7a5c58;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            grid-row: 2 / span 3;
+            grid-column: 2;
+        }
+
+        h1 {
+            font-family: karla, sans-serif;
+            color: #7a5c58;
+            border: #ec91d8 10px solid;
+            background-color: #ffaaea;
+            position: relative;
+            grid-row: 1;
+            grid-column: 2;
+        }
+
+        .cat-image-1 {
+            position: relative;
+            justify-self: start;
+            border: 10px solid #ec91d8;
+            background-color: #ffaaea;
+            grid-row: 1 / span 2;
+            grid-column: 1;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li class="active"><a href="found.html">Found</a></li>
-            <li><a href="report.html">Report</a></li>
-        </ul>
-    </nav>
-    <iframe
-        src="https://docs.google.com/forms/d/e/1FAIpQLSfEVWCKn9lxVUa42Ketzk-MSzYXFdxUlY-w4OBEwxBwBwzMQA/viewform?embedded=true"
-        width="1000" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    <ul class="nav">
+        <li><a href="found.html">Found</a></li>
+        <li><a href="report.html">Report</a></li>
+    </ul>
+
+    <div class="grid-container">
+        <img src="images/cat-image-1.jpeg" alt="cat-image-1" class="grid-item cat-image-1">
+
+        <h1 class="grid-item">Report a Found Pet</h1>
+        <!-- NEW CONCEPT: embedding google form -->
+        <iframe class="grid-item"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSfEVWCKn9lxVUa42Ketzk-MSzYXFdxUlY-w4OBEwxBwBwzMQA/viewform?embedded=true"
+            width="1000" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
 
     <footer>
         <p>Made by Mahika</p>
