@@ -18,14 +18,46 @@
         --col-5: #7A5C58;
     }
     .grid-container {
-    display: grid;
-    grid-gap: 15px;
-    grid-template-columns: auto; /* auto auto auto is 3 columns */
-    padding: 10px;
-    background-color: var(--col-5);
+        display: grid;
+        grid-gap: 15px;
+        grid-template-columns: 300px auto; /* auto auto auto is 3 columns */
+        grid-auto-rows: 400px;
+        padding: 10px;
+        background-color: var(--col-5);
     }
+    .grid-item {
+        grid-column: 2;
+        background-color: var(--col-4);
+        text-align: center;
+        font-size: 30px;
+        padding: 20px;
+    }
+    .grid-img {
+        grid-column: 1;
+        padding: 0;
+        
+    }
+    .grid-img img {
+        width: 300px;
+    }
+    
+
 </style>
 <body style="background-color: var(--col-1);">
+    <!--nav stuff-->
+    <ul class="nav">
+        <li><a href="index.html"><span style="color: #7a5c58; font-size:20px">Home</span></a></li>
+        <li><a href="about.html"><span style="color: #7a5c58; font-size:20px">About</span></a></li>
+        <li><a href="gallery.html"><span style="color: #7a5c58; font-size:20px">Gallery</span></a></li>
+        <li><a href="found.html"><span style="color: #7a5c58; font-size:20px">Found Pets</span></a></li>
+        <li><a href="report.html"><span style="color: #7a5c58; font-size:20px">Report a Pet</span></a></li>
+        <li><a href="tips.html"><span style="color: #7a5c58; font-size:20px">Tips</span></a></li>
+        <li><a href="contact.html"><span style="color: #7a5c58; font-size:20px">Contact</span></a></li>
+    </ul>
     
+    <div class="grid-container">
+        <div class="grid-img"><img src="images/placeholder.png"></div>
+        <div class="grid-item">aaaaaaaawgiejoijogweioj</div>
+    </div>
 </body>
 </html>
