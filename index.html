@@ -3,33 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>PawFinder - Reuniting Pets with Their Owners</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Karla:ital,wght@0,800;1,800&display=swap" rel="stylesheet">
 </head>
-<body style="background-color: #7A5C58;">
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/PawFinder.png" alt="PawFinder Logo">
+        </div>
+        <ul class="nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="found.html">Found Pets</a></li>
+            <li><a href="report.html">Report a Pet</a></li>
+            <li><a href="tips.html">Tips</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </header>
 
-    <ul class="nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="found.html">Found Pets</a></li>
-        <li><a href="report.html">Report a Pet</a></li>
-        <li><a href="tips.html">Tips</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-
-    <div><img src="images/pawprint.png"></div>
-    <div class="grid-item main-1">We are PawFinders, a website dedicated to finding lost pets!</div>
-    <div class="grid-item support-1">Support Content</div>
-    <div class="grid-item support-2">Support Content 2</div>
-    <div class="grid-item main-2">Main Content 2</div>
-    <div class="grid-item">Side Content</div>
+    <div class="grid-container">
+        <div class="grid-item main-img"><img src="images/pawprint.png" alt="Paw Print Icon"></div>
+        <div class="grid-item main-1">
+            <h1>Welcome to PawFinder</h1>
+            <p>We are dedicated to reuniting lost pets with their owners in the Greater Seattle Area. Start by entering your area code to find pets near you.</p>
+            <form id="zipCodeForm" action="gallery.html">
+                <label for="zipCode">Enter Your Zip Code:</label>
+                <input type="text" id="zipCode" name="zipCode" pattern="[0-9]{5}" placeholder="ex: 98101" required>
+                <button type="submit">Find Pets</button>
+            </form>
+        </div>
+        <div class="grid-item support-1">
+            <img src="images/lostpets.png" alt="Lost Pet Placeholder" class="support-img">
+            <h2>Lost a Pet?</h2>
+            <p>Check our <a href="gallery.html">Gallery</a> page or report your missing pet on our <a href="report.html">Report a Pet</a> page.</p>
+        </div>
+        <div class="grid-item support-2">
+            <img src="images/foundpets.png" alt="Found Pet Placeholder" class="support-img">
+            <h2>Found a Pet?</h2>
+            <p>Help reunite a pet with its owner by submitting details on our <a href="report.html">Report a Pet</a> page.</p>
+        </div>
+    </div>
 
     <footer>
-        <p>Made by Eda</p>
+        <p>&copy; 2025 PawFinder. Page made by Eda.</p>
     </footer>
+
+    <script>
+        document.getElementById('zipCodeForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const zipCode = document.getElementById('zipCode').value;
+            localStorage.setItem('zipCode', zipCode);
+            window.location.href = 'gallery.html';
+        });
+    </script>
 </body>
 </html>
