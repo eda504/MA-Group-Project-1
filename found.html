@@ -42,7 +42,7 @@
         }
 
 
-        iframe {
+        .form {
             position: relative;
             background-color: #a47963;
             max-width: 640px;
@@ -50,12 +50,20 @@
             border: 10px solid #7a5c58;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
-            grid-row: 2 / span 3;
+            grid-row: 4 / span 3;
             grid-column: 2;
+            justify-self: center;
+        }
+
+        .video {
+            grid-row: 3;
+            grid-column: 2;
+            justify-self: center;
         }
 
         h1 {
             font-family: karla, sans-serif;
+            font-size: 40px;
             color: #7a5c58;
             border: #ec91d8 10px solid;
             background-color: #ffaaea;
@@ -64,26 +72,61 @@
             grid-column: 2;
         }
 
-        .cat-image-1 {
+        p {
+            font-family: karla, sans-serif;
+            font-size: 30px;
+            color: #7a5c58;
+            /* border: #ec91d8 10px solid; */
+            /* background-color: #ffaaea; */
+            position: relative;
+            grid-row: 2;
+            grid-column: 2;
+        }
+
+        .image-1 {
+            z-index: 0;
             position: relative;
             justify-self: start;
             border: 10px solid #ec91d8;
             background-color: #ffaaea;
             grid-row: 1 / span 2;
             grid-column: 1;
-            width: 200px;
-            height: 200px;
+            width: 400px;
+            height: 400px;
         }
 
-        .cat-image-2 {
+        .image-2 {
+            z-index: 0;
             position: relative;
             justify-self: start;
             border: 10px solid #ec91d8;
             background-color: #ffaaea;
             grid-row: 1 / span 2;
             grid-column: 3;
-            width: 200px;
-            height: 200px;
+            width: 400px;
+            height: 400px;
+        }
+
+        .image-3 {
+            position: relative;
+            justify-self: start;
+            border: 10px solid #ec91d8;
+            background-color: #ffaaea;
+            grid-row: 3 / span 2;
+            grid-column: 1;
+            width: 400px;
+            height: 400px;
+        }
+
+        .image-4 {
+            position: relative;
+            justify-self: start;
+            border: 10px solid #ec91d8;
+            background-color: #ffaaea;
+            grid-row: 3 / span 2;
+            grid-column: 3;
+            width: 400px;
+            height: 400px;
         }
     </style>
 </head>
@@ -99,17 +142,28 @@
         <li><a href="contact.html">Contact</a></li>
     </ul>
 
-    <!-- <div class="grid-area">
-        <img src="images/cat-image-1.jpeg" alt="cat-image-1" class="grid-part cat-image-1">
-        <img src="images/pawprint.png" alt="cat-image-2" class="grid-part cat-image-2">
+    <div class="grid-area">
+        <img src="images/cat-image-1.jpeg" alt="cat-image-1" class="grid-part image-1">
+        <img src="images/pawprint.png" alt="cat-image-2" class="grid-part image-2">
+        <img src="images/dog-image-1.avif" alt="cat-image-1" class="grid-part image-3">
+        <img src="images/dog-image-2.jpeg" alt="cat-image-1" class="grid-part image-4">
 
 
-        <h1 class="grid-part">Report a Found Pet</h1>
-         NEW CONCEPT: embedding google form 
-        <iframe class="grid-part"
-            src="https://docs.google.com/forms/d/e/1FAIpQLSfEVWCKn9lxVUa42Ketzk-MSzYXFdxUlY-w4OBEwxBwBwzMQA/viewform?embedded=true"
-            width="1000" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-    </div> -->
+
+        <h1 class="grid-part">Found Pets</h1>
+        <p class="grid-part">If you have found a lost pet from our gallery page, please make sure to report it using the
+            following form. We are so greatful to you for helping us find the lost pets in our community. </p>
+        <!-- NEW CONCEPT: embedding microsoft form -->
+        <iframe class="grid-part form" width="640px" height="480px"
+            src="https://forms.office.com/Pages/ResponsePage.aspx?id=ix5osiDdz0axYzcaLXxgFCXqHDgOPkJGrwlyp-yf9xxUMkRLQkRKTkxIV0ZWRkZQVzU2SkJRNkZMUi4u&embed=true"
+            frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh"
+            allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
+        <iframe class="grid-part, video" width="200" height="150"
+            src="https://www.youtube.com/embed/dpwYEySyW4s?si=qPkFvvGN3DC3qDxp" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
 
     <footer>
         <p>Made by Mahika</p>
