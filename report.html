@@ -1,3 +1,8 @@
+<!-- I challenged myself throughout both my webpages by working with a embedded form in each webpage. Working with the form was challenging because I needed to figure out how to implement it into my grid without cutting off the form, and how to style the form while keeping it at a size that makes it easy for the users to fill it out. Another challenge was working with a CSS that was constantly changing. Sometimes, my webpage would completely change after pulling the style.css code, and it was difficult to keep up with the changes but it was also a good challenge. -->
+
+<!-- Note to Mr. Sieg whiile grading. The embedded form won't work in firefox web so you need to open it in another browser like Chrome 👍 -->
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,7 +29,7 @@
             content: "";
             position: fixed;
             inset: 0;
-            background-color: #ffd8f594;
+            background-color: #8f725c;
             pointer-events: none;
             z-index: 0;
         }
@@ -44,7 +49,7 @@
 
         .form {
             position: relative;
-            background-color: #a47963;
+            background-color: #4A3728;
             max-width: 640px;
             height: 800px;
             border: 10px solid #7a5c58;
@@ -56,17 +61,21 @@
         }
 
         .video {
+            z-index: 0;
+            background-color: #4A3728;
+            border-radius: 10px;
+            border: 10px solid #4A3728;
             grid-row: 3;
             grid-column: 2;
             justify-self: center;
         }
 
         h1 {
-            font-family: karla, sans-serif;
+            font-family: "Edu NSW ACT Cursive", cursive;
             font-size: 40px;
-            color: #7a5c58;
-            border: #ec91d8 10px solid;
-            background-color: #ffaaea;
+            color: #4A3728;
+            border: #B5838D 10px solid;
+            background-color: #ffd0d9;
             position: relative;
             grid-row: 1;
             grid-column: 2;
@@ -75,7 +84,7 @@
         p {
             font-family: karla, sans-serif;
             font-size: 30px;
-            color: #7a5c58;
+            color: #4A3728;
             /* border: #ec91d8 10px solid; */
             /* background-color: #ffaaea; */
             position: relative;
@@ -87,8 +96,8 @@
             z-index: 0;
             position: relative;
             justify-self: start;
-            border: 10px solid #ec91d8;
-            background-color: #ffaaea;
+            border: 10px solid #B5838D;
+            background-color: #ffd0d9;
             grid-row: 1 / span 2;
             grid-column: 1;
             width: 400px;
@@ -99,8 +108,8 @@
             z-index: 0;
             position: relative;
             justify-self: start;
-            border: 10px solid #ec91d8;
-            background-color: #ffaaea;
+            border: 10px solid #B5838D;
+            background-color: #ffd0d9;
             grid-row: 1 / span 2;
             grid-column: 3;
             width: 400px;
@@ -110,8 +119,8 @@
         .image-3 {
             position: relative;
             justify-self: start;
-            border: 10px solid #ec91d8;
-            background-color: #ffaaea;
+            border: 10px solid #B5838D;
+            background-color: #ffd0d9;
             grid-row: 3 / span 2;
             grid-column: 1;
             width: 400px;
@@ -121,8 +130,8 @@
         .image-4 {
             position: relative;
             justify-self: start;
-            border: 10px solid #ec91d8;
-            background-color: #ffaaea;
+            border: 10px solid #B5838D;
+            background-color: #ffd0d9;
             grid-row: 3 / span 2;
             grid-column: 3;
             width: 400px;
@@ -132,21 +141,26 @@
 </head>
 
 <body>
-    <ul class="nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="found.html">Found Pets</a></li>
-        <li><a href="report.html">Report a Pet</a></li>
-        <li><a href="tips.html">Tips</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
+    <header>
+        <div class="logo">
+            <img src="images/PawFinder.png" alt="PawFinder Logo">
+        </div>
+        <ul class="nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="found.html">Found Pets</a></li>
+            <li><a href="report.html">Report a Pet</a></li>
+            <li><a href="tips.html">Tips</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </header>
 
     <div class="grid-area">
-        <img src="images/cat-image-1.jpeg" alt="cat-image-1" class="grid-part image-1">
-        <img src="images/pawprint.png" alt="cat-image-2" class="grid-part image-2">
-        <img src="images/dog-image-1.avif" alt="cat-image-1" class="grid-part image-3">
-        <img src="images/dog-image-2.jpeg" alt="cat-image-1" class="grid-part image-4">
+        <img src="images/pawprint.png" alt="cat-image-1" class="grid-part image-1">
+        <img src="images/dog-image-3.jpg" alt="cat-image-2" class="grid-part image-2">
+        <img src="images/dog-image-4.jpg" alt="cat-image-1" class="grid-part image-3">
+        <img src="images/PawFinder.png" alt="cat-image-1" class="grid-part image-4">
 
 
 
@@ -154,10 +168,11 @@
         <p class="grid-part">If you have lost a pet, please fill out this form which allows us to add your pet to our
             database of lost pets. Then our users can notify you if your furry friend has been found! Below is a video
             that can help you take next steps towards finding your lost pet. </p>
-        <!-- NEW CONCEPT: embedding google form -->
-        <iframe class="grid-part, form"
-            src="https://docs.google.com/forms/d/e/1FAIpQLSfEVWCKn9lxVUa42Ketzk-MSzYXFdxUlY-w4OBEwxBwBwzMQA/viewform?embedded=true"
-            width="1000" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        <!-- NEW CONCEPT: embedding microsoft form -->
+        <iframe class="grid-part form" width="640px" height="480px"
+            src="https://forms.office.com/Pages/ResponsePage.aspx?id=ix5osiDdz0axYzcaLXxgFCXqHDgOPkJGrwlyp-yf9xxUMVE3QjM5N0pMOVpUSUlFT05RTTZMUE5INi4u&embed=true"
+            frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh"
+            allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
         <iframe class="grid-part, video" width="200" height="150"
             src="https://www.youtube.com/embed/dpwYEySyW4s?si=qPkFvvGN3DC3qDxp" title="YouTube video player"
             frameborder="0"
