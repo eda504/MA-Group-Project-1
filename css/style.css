@@ -8,19 +8,21 @@ header {
     align-items: center;
     justify-content: center;
     padding: 10px 20px;
-    height: 60px; /* Reduced height for shorter nav bar */
+    height: 60px;
+    /* Reduced height for shorter nav bar */
 }
 
 body {
-        background-color: #8f725c;
-        margin: 0;
-    }
+    background-color: #8f725c;
+    margin: 0;
+}
 
 
 .logo {
     position: absolute;
     left: 30px;
-    top: 10px; /* Small offset from the top */
+    top: 10px;
+    /* Small offset from the top */
     z-index: 2;
 }
 
@@ -46,7 +48,7 @@ body {
     margin: 0 15px;
     font-family: "Edu NSW ACT Cursive", cursive;
     font-weight: 600;
-    font-size: 18px; 
+    font-size: 18px;
 }
 
 .nav li a:hover {
@@ -70,7 +72,9 @@ h2 {
     color: #4A3728;
 }
 
-p, label, a {
+p,
+label,
+a {
     font-family: "Karla", sans-serif;
     font-weight: 800;
     font-size: 18px;
