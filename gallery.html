@@ -20,7 +20,7 @@
     .grid-container {
         display: grid;
         grid-gap: 15px;
-        grid-template-columns: 300px auto; /* auto auto auto is 3 columns */
+        grid-template-columns: 300px 450px; /* auto auto auto is 3 columns */
         grid-auto-rows: 300px;
         padding: 10px;
         background-color: var(--col-5);
@@ -39,12 +39,14 @@
         background-color: var(--col-2);
         padding: 0;
         place-content: center;
-        place-items: center;
         border-radius: 12px;
     }
     .grid-img img {
+        place-self: center;
         max-width: 300px;
         max-height: 300px;
+        width: 300px;
+        justify-self: center;
     }
     
 
@@ -65,14 +67,27 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </header>
+
+
+    <div style="background-color: var(--col-2); text-align: center; padding: 50px; border: 10px solid var(--col-1);">
+        <h1>Is your pet missing?</h1>
+        <a style="font-size: 50px;" href="report.html">Report a Lost Pet Here</a>
+    </div>
     
     <div class="grid-container">
         <div class="grid-img"><img src="images/placeholder.png"></div>
-        <div class="grid-item-g">aaaaaaaawgiejoijogweaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaioj</div>
-        <div class="grid-img"><img src="images/cat-image-1.jpeg"></div>
-        <div class="grid-item-g">aaaaaaaawgiejoijogweioj</div>
+        <div class="grid-item-g">
+            <h1>Pet name 1</h1>
+            <p>description</p>
+        </div>
+        <div class="grid-img"><img src="images/dog-image-2.jpeg"></div>
+        <div class="grid-item-g">
+            <h1>Pet name 1</h1>
+            <p>description</p></div>
         <div class="grid-img"><img src="images/ChatGPT Image Oct 8, 2025, 10_33_27 AM.png"></div>
-        <div class="grid-item-g">aaaaaaaawgiejoijogweioj</div>
+        <div class="grid-item-g">
+            <h1>Pet name 1</h1>
+            <p>description</p></div>
     </div>
 
     <footer>
