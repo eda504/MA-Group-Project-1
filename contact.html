@@ -5,60 +5,106 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PawFinder - Contact</title>
 
-  
   <link rel="stylesheet" href="css/style.css">
-
- 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Karla:ital,wght@0,800;1,800&display=swap" rel="stylesheet">
 
- 
   <style>
-    .tipmain {
-      text-align: center;
-      margin: 40px auto 40px;
-      max-width: 1200px;
-      position: relative;
-      z-index: 0;
-    }
+  
+  .tipmain {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 1200px;
+    position: relative;
+    z-index: 0;
+  }
 
-    .tips-container {
+  .tips-container {
       max-width: 1200px;
       margin: 0 auto 40px;
       padding: 0 30px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
 
-    .tip-box {
+      display: grid;
+      gap: 20px; 
+      align-items: stretch;
+  }
+
+  
+  .tip-box {
       background-color: #dbcbbc;
       border: 2px solid #B5838D;
       border-radius: 12px;
       padding: 20px;
       box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
-    }
+    
+  }
 
-    .tip-box h3 {
+  .tip-box:hover {
+  transform: scale(1.02);
+  filter: brightness(1.5); /* NEW FEATURE:  brightens box on hover */
+  transition: 0.3s ease; /* smooth animation */
+}
+
+  .tip-box h3 {
       font-family: "Edu NSW ACT Cursive", cursive;
       font-weight: 600;
       font-size: 24px;
       color: #4A3728;
-      margin: 0 0 10px 0;
-    }
+      margin-bottom: 10px;
+  }
 
-    .tip-box p {
+  .tip-box p {
       font-family: "Karla", sans-serif;
       font-weight: 800;
       font-size: 18px;
       color: #4A3728;
-      margin: 0;
-    }
-  </style>
+  }
+
+  iframe {
+      display: block;
+      margin: 40px auto;
+      border-radius: 12px;
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  footer {
+      text-align: center;
+      margin-top: 40px;
+      font-family: "Karla", sans-serif;
+      font-weight: 800;
+      color: #4A3728;
+  }
+  .contact-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+.supporting-header {
+  background-color: #dbcbbc;
+  color: #4A3728;
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-family: "Karla", sans-serif;
+  font-size: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  margin: 30px auto; 
+  text-align: center;
+}
+
+
+
+
+
+</style>
 </head>
 
 <body>
+    <div class="logo">
+            <img src="images/PawFinder.png" alt="PawFinder Logo">
+        </div>
   <nav>
     <ul class="nav">
       <li><a href="index.html">Home</a></li>
@@ -71,7 +117,18 @@
     </ul>
   </nav>
 
-  <div class="tipmain"><h1>Contact</h1></div>
+  <div class="tipmain"><h1>Contact Local Shelters</h1></div>
+
+  <div class="contact-grid">
+  <div class="main-content">
+   
+  </div>
+
+  <h2 class="supporting-header">
+  Here are some local shelters that you can give a call if you are missing your pet, 
+  or if you have found a missing pet.
+</h2>
+</div>
 
   <div class="tips-container">
     <div class="tip-box">
@@ -92,7 +149,7 @@
     </div>
   </div>
 
-  <h1>Video about a woman adopting a pet from a shelter:</h1>
+  
   <iframe width="315" height="560"
     src="https://www.youtube.com/embed/CDeP1y7STKU"
     title="YouTube Short video player"
@@ -100,6 +157,6 @@
     allowfullscreen>
   </iframe>
 
-  <footer>2025 PawFinder -- Page made by Timur</footer>
+  <footer> PawFinder 2025 -- Page made by Timur</footer>
 </body>
 </html>
