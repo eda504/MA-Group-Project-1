@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lost Pets</title>
+    <title>Lost Pets Gallery</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Karla:ital,wght@0,800;1,800&display=swap" rel="stylesheet">
 </head>
 <style>
     :root {
@@ -14,14 +18,79 @@
         --col-5: #7A5C58;
     }
     .grid-container {
-    display: grid;
-    grid-gap: 15px;
-    grid-template-columns: auto; /* auto auto auto is 3 columns */
-    padding: 10px;
-    background-color: var(--col-5);
+        display: grid;
+        grid-gap: 15px;
+        grid-template-columns: 300px 450px; /* auto auto auto is 3 columns */
+        grid-auto-rows: 300px;
+        padding: 10px;
+        background-color: var(--col-5);
+        border-radius: 12px;
     }
-</style>
-<body style="background-color: var(--col-1);">
+    .grid-item-g {
+        grid-column: 2;
+        background-color: var(--col-4);
+        text-align: center;
+        font-size: 30px;
+        padding: 20px;
+        border-radius: 12px;
+    }
+    .grid-img {
+        grid-column: 1;
+        background-color: var(--col-2);
+        padding: 0;
+        place-content: center;
+    }
+    .grid-img img {
+        place-self: center;
+        max-width: 300px; /* NEW FEATURE, max-width and max-height */
+        max-height: 300px;
+        width: 300px;
+        justify-self: center;
+    }
     
+
+</style>
+<body>
+    <!--nav stuff-->
+    <header>
+        <div class="logo">
+            <img src="images/PawFinder.png" alt="PawFinder Logo">
+        </div>
+        <ul class="nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="found.html">Found Pets</a></li>
+            <li><a href="report.html">Report a Pet</a></li>
+            <li><a href="tips.html">Tips</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </header>
+
+
+    <div style="background-color: var(--col-2); text-align: center; padding: 50px; border: 10px solid var(--col-1);">
+        <h1>Is your pet missing?</h1>
+        <a style="font-size: 50px;" href="report.html">Report a Lost Pet Here</a>
+    </div>
+    
+    <div class="grid-container">
+        <div class="grid-img"><img src="images/placeholder.png"></div>
+        <div class="grid-item-g">
+            <h1 style="display: inline;">Pet name 1</h1> <h2 style="display: inline;">Type</h2>
+            <p>description</p>
+        </div>
+        <div class="grid-img"><img src="images/dog-image-2.jpeg"></div>
+        <div class="grid-item-g">
+            <h1>Pet name 1</h1>
+            <p>description</p></div>
+        <div class="grid-img"><img src="images/cat-image-1.jpeg"></div>
+        <div class="grid-item-g">
+            <h1>Pet name 1</h1>
+            <p>description aaaaaaaaaaa a aa a a aa aaaaaaaaaaaa aaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaa a aa a a  aaaaaaaaaaaaa</p></div>
+    </div>
+
+    <footer>
+        <p>Made by Tae</p>
+    </footer>
 </body>
 </html>

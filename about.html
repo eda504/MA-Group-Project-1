@@ -3,9 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>About PawFinder</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Karla:ital,wght@0,800;1,800&display=swap" rel="stylesheet">
 </head>
+<style>
+    :root {
+        --col-1: #EC91D8;
+        --col-2: #FFAAEA;
+        --col-3: #FFBEEF;
+        --col-4: #A47963;
+        --col-5: #7A5C58;
+    }
+    .statement {
+        text-align: justify;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        line-height: 50px;
+    }
+    @keyframes border{
+        0% {border-style: dashed; border-color: var(--col-3); border-radius: 10px;}
+        50% {border-style: solid; border-color: var(--col-1); border-radius: 10px;}
+        100% {border-style: dashed; border-color: var(--col-3); border-radius: 10px;}
+    }
+    .border-animated{
+        animation-name: border;
+        animation-duration: 2s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+    }
+    @keyframes title{
+        0% {color: var(--col-1);}
+        20% {color: var(--col-2);}
+        40% {color: var(--col-3);}
+        60% {color: var(--col-4);}
+        80% {color: var(--col-5);}
+        100% {color: var(--col-1);}
+    }
+    .title-animated{
+        animation-name: title;
+        animation-duration: 6s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+    }
+    @keyframes text-pop {
+        0% {color: var(--col-3);}
+        10% {color: var(--col-2);}
+        100% {}
+    }
+    .pop-animated {
+        animation-name: text-pop;
+        animation-duration: 3s;
+        animation-timing-function: ease;
+        animation-iteration-count: 1;
+    }
+    .faq {
+        text-align: left;
+        position: relative;
+        width: 500px;
+        left: 30%;
+        background-color: none;
+    }
+    .faq h2, .faq p {
+        padding: 7.5px;
+        margin-bottom: 0;
+        padding-left: 30px;
+    }
+</style>
 <body>
-    
+    <!--nav stuff-->
+    <header>
+        <div class="logo">
+            <img src="images/PawFinder.png" alt="PawFinder Logo">
+        </div>
+        <ul class="nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="found.html">Found Pets</a></li>
+            <li><a href="report.html">Report a Pet</a></li>
+            <li><a href="tips.html">Tips</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </header>
+
+    <h1 class="title-animated" style="text-align: center;">Our Mission</h1>
+    <div class="border-animated" style="margin: 175px; margin-top: 0; margin-bottom: 10px; border: 10px dotted var(--col-1); border-style: dashed; background-color: var(--col-3);"><h2 class="statement pop-animated">At PawFinder, our mission is to reunite lost pets with the people who love them. Through our gallery of lost pets, submission forms, and helpful resources, we strive to bring hope, awareness, and connection to every search—because every paw deserves to find its way home.</h2></div>
+    <img src="images/Paw_to_Hand.jpg" style="display: block; margin: auto; margin-bottom: 10px; width: 500px; border: 10px solid var(--col-1); border-radius: 10px;">
+
+    <div style="background-color: var(--col-4);">
+        <h1 style="text-align: center;">Frequently Asked Questions</h1>
+        <div class="faq">
+            <h2 style="background-color: var(--col-1);">Does It Cost Money?</h2>
+            <p>No, it's completely free!</p>
+            <h2 style="background-color: var(--col-1);">Do I Need an Account?</h2>
+            <p>No, it's completely open!</p>
+        </div>
+    </div>
+    <div style="background-color: var(--col-2); text-align: center; padding: 50px; border: 10px solid var(--col-1);">
+        <a style="font-size: 75px;" href="report.html">Report a Lost Pet Here</a>
+    </div>
+
+    <footer>
+        <p>Made by Tae</p>
+    </footer>
 </body>
 </html>

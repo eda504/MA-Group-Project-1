@@ -1,34 +1,93 @@
-.nav {
-    list-style: none;
-    text-align: center;
-    background-color: #EC91D8;
-    padding: 20px 0;
-    margin: 0;
+header {
+    background-color: #D8A7B1;
+    border-bottom: 2px solid #B5838D;
     position: sticky;
     top: 0;
-    z-index: 1000;
-    width: 100%;
-    border-bottom: 2px solid #FFAAEA;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    height: 60px;
+    /* Reduced height for shorter nav bar */
 }
 
-.nav li {
-    display: inline;
-    margin: 10px;
+body {
+    background-color: #8f725c;
+    margin: 0;
+}
+
+
+.logo {
+    position: absolute;
+    left: 30px;
+    top: 10px;
+    /* Small offset from the top */
+    z-index: 2;
+}
+
+.logo img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+.nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.nav li a {
+    text-decoration: none;
+    color: #4A3728;
+    margin: 0 15px;
     font-family: "Edu NSW ACT Cursive", cursive;
-    font-optical-sizing: auto;
     font-weight: 600;
-    font-style: normal;
-    color: #735649; 
-    font-size:20px
+    font-size: 18px;
 }
 
 .nav li a:hover {
-    color: #611e53;
+    color: #6B4E31;
     transition: color 0.3s ease;
 }
 
 h1 {
-    font-size: 30px;
-    float:left;
-    
+    font-size: 40px;
+    font-family: "Edu NSW ACT Cursive", cursive;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    color: #4A3728;
+}
+
+h2 {
+    font-size: 28px;
+    font-family: "Edu NSW ACT Cursive", cursive;
+    font-weight: 600;
+    margin: 0 0 15px 0;
+    color: #4A3728;
+}
+
+p,
+label,
+a {
+    font-family: "Karla", sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    color: #4A3728;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #D8A7B1;
+    color: #4A3728;
+    font-family: "Karla", sans-serif;
+    font-weight: 800;
+    border-top: 2px solid #B5838D;
+    margin-top: 40px;
 }
